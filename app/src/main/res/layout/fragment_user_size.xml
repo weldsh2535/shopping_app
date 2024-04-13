@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.other.NotificationFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="64dp">
+
+                <ImageView
+                    android:id="@+id/imgNeckHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgNeckToWirst"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/front_neck_height_man" />
+
+                <ImageView
+                    android:id="@+id/imgNeckToWirst"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgOuterArm"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgNeckHeight"
+                    app:layout_constraintTop_toTopOf="@+id/imgNeckHeight"
+                    app:srcCompat="@drawable/back_neck_point_to_wrist_length_man" />
+
+                <ImageView
+                    android:id="@+id/imgOuterArm"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgNeckToWirst"
+                    app:layout_constraintTop_toTopOf="@+id/imgNeckHeight"
+                    app:srcCompat="@drawable/outer_arm_length_man" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyNeckHeight"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgNeckHeight"
+                    app:layout_constraintStart_toStartOf="@+id/imgNeckHeight"
+                    app:layout_constraintTop_toBottomOf="@+id/imgNeckHeight">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/neckHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Neck Height" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyNeckToWirst"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgNeckToWirst"
+                    app:layout_constraintStart_toStartOf="@+id/imgNeckToWirst"
+                    app:layout_constraintTop_toBottomOf="@+id/imgNeckToWirst">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/neckToWirst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Neck To Wirst" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyOuterArm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgOuterArm"
+                    app:layout_constraintStart_toStartOf="@+id/imgOuterArm"
+                    app:layout_constraintTop_toBottomOf="@+id/imgOuterArm">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/outerArm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Outer Arm" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgChestGrith"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgHipGrith"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyNeckHeight"
+                    app:srcCompat="@drawable/chest_girth_man" />
+
+                <ImageView
+                    android:id="@+id/imgHipGrith"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgWaistGrith"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgChestGrith"
+                    app:layout_constraintTop_toTopOf="@+id/imgChestGrith"
+                    app:srcCompat="@drawable/hip_girth_man" />
+
+                <ImageView
+                    android:id="@+id/imgWaistGrith"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgHipGrith"
+                    app:layout_constraintTop_toTopOf="@+id/imgChestGrith"
+                    app:srcCompat="@drawable/waist_girth_man" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyChestGrith"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgChestGrith"
+                    app:layout_constraintStart_toStartOf="@+id/imgChestGrith"
+                    app:layout_constraintTop_toBottomOf="@+id/imgChestGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/chestGrith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Chest Grith" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyHipGrith"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgHipGrith"
+                    app:layout_constraintStart_toStartOf="@+id/imgHipGrith"
+                    app:layout_constraintTop_toTopOf="@+id/lyChestGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hipGrith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hip Grith" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyWaistGrith"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgWaistGrith"
+                    app:layout_constraintStart_toStartOf="@+id/imgWaistGrith"
+                    app:layout_constraintTop_toTopOf="@+id/lyChestGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/waistGrith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Waist Grith" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgTorsoHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgNeckToWaist"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyChestGrith"
+                    app:srcCompat="@drawable/torso_height_man" />
+
+                <ImageView
+                    android:id="@+id/imgNeckToWaist"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgBackShoulder"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgTorsoHeight"
+                    app:layout_constraintTop_toTopOf="@+id/imgTorsoHeight"
+                    app:srcCompat="@drawable/back_neck_point_to_waist_man" />
+
+                <ImageView
+                    android:id="@+id/imgBackShoulder"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgNeckToWaist"
+                    app:layout_constraintTop_toTopOf="@+id/imgTorsoHeight"
+                    app:srcCompat="@drawable/back_shoulder_width_man" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyTorsoHeight"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgTorsoHeight"
+                    app:layout_constraintStart_toStartOf="@+id/imgTorsoHeight"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTorsoHeight">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/torsoHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Torso Height" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyNeckToWaist"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgNeckToWaist"
+                    app:layout_constraintStart_toStartOf="@+id/imgNeckToWaist"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTorsoHeight">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/neckToWaist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Neck To Waist" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyBackShoulder"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgBackShoulder"
+                    app:layout_constraintStart_toStartOf="@+id/imgBackShoulder"
+                    app:layout_constraintTop_toTopOf="@+id/lyTorsoHeight">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/backShoulder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Back Shoulder" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgTightGrith"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgLegHeightIn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyTorsoHeight"
+                    app:srcCompat="@drawable/thigh_girth_man" />
+
+                <ImageView
+                    android:id="@+id/imgLegHeightIn"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/imgLegHeightOut"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgTightGrith"
+                    app:layout_constraintTop_toTopOf="@+id/imgTightGrith"
+                    app:srcCompat="@drawable/inside_leg_height_man" />
+
+                <ImageView
+                    android:id="@+id/imgLegHeightOut"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgLegHeightIn"
+                    app:layout_constraintTop_toTopOf="@+id/imgTightGrith"
+                    app:srcCompat="@drawable/outside_leg_height_man" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyLegHeightOut"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imgLegHeightOut"
+                    app:layout_constraintTop_toTopOf="@+id/lyTightGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/legHeightOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Outside Leg Height" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyLegHeightIn"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgLegHeightIn"
+                    app:layout_constraintStart_toStartOf="@+id/imgLegHeightIn"
+                    app:layout_constraintTop_toTopOf="@+id/lyTightGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/legHeightIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Inside Leg Height" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyTightGrith"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/black"
+                    app:boxStrokeColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imgTightGrith"
+                    app:layout_constraintStart_toStartOf="@+id/imgTightGrith"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTightGrith">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tightGrith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tight Grith" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnSaveMeasurement"
+                    android:layout_width="395dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Save"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyTightGrith" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/back"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text="Body Size Measerument"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No new notifications"
+            android:textColor="@color/text_light"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <!--D. DISPLAY TRENDING BRAND IMAGE TODO RESIZE IMAGE IN FUCNTION-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trendImg"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--D. DISPLAY TRENDING BRAND IMAGE TODO RESIZE IMAGE IN FUCNTION-->
+    <!--D. DISPLAY TRENDING BRAND VIDEO TODO RESIZE IMAGE IN FUCNTION & AUTOPLAY-->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iconVideoTrending"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/trendImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
+        app:srcCompat="@drawable/ic_round_play_circle_outline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyBrands"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_play_circle_outline_white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgBrandShow"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="matrix"
+                android:src="@drawable/img2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <VideoView
+                android:id="@+id/video"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:layout_gravity="start"
+                android:layout_marginBottom="88dp"
+                android:outlineProvider="bounds"
+                android:scaleType="matrix"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/brandName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/btn_circle_orange"
+                android:gravity="start"
+                android:paddingStart="96dp"
+                android:paddingLeft="32dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="8dp"
+                android:text="Adidas"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ringLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgLogoShow"
+                app:layout_constraintTop_toTopOf="@+id/ringLogo"
+                app:layout_constraintVertical_bias="0.307" />
+
+            <ImageView
+                android:id="@+id/ringLogo"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/instagram_ring"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgLogoShow"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@color/ic_launcher_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/addidas"
+                app:layout_constraintBottom_toBottomOf="@+id/ringLogo"
+                app:layout_constraintEnd_toEndOf="@+id/ringLogo"
+                app:layout_constraintStart_toStartOf="@+id/ringLogo"
+                app:layout_constraintTop_toTopOf="@+id/ringLogo"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/brandName"
+                app:layout_constraintTop_toTopOf="@+id/brandName"
+                app:srcCompat="@drawable/bottom_sheet_bg"
+                tools:layout_editor_absoluteX="318dp" />
+
+            <ImageView
+                android:id="@+id/btnFollow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_follow_adds_white"
+                app:layout_constraintBottom_toBottomOf="@+id/brandName"
+                app:layout_constraintEnd_toEndOf="@+id/brandName"
+                app:layout_constraintTop_toTopOf="@+id/brandName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
