@@ -50,7 +50,7 @@ class YourShoppingBagFragment : Fragment() {
 
 
         try{
-            viewModel.getCart()
+           viewModel.getCart()
 
         }catch (e:Exception){
             Toast.makeText(context, "error: "+e.message, Toast.LENGTH_SHORT).show()
@@ -96,7 +96,7 @@ class YourShoppingBagFragment : Fragment() {
     }
 
     private val cartList = Observer<Cart>{
-
+        Log.d("aweke","-------------")
         binding?.rvShoppingBag?.adapter = ShoppingBagItemAdapter(it.cartItems, this.requireActivity())
         binding?.tvPrice?.text = "$CURRENCY${it.total}"
         binding?.tvNoOfItems?.text = "${it.cartItems.size}Items"

@@ -48,11 +48,11 @@ class AppModule {
 
     }
 
-    @Provides
-    @Singleton
-    fun providesAuthenticationToken(@ApplicationContext context: Context) : Interceptor{
-        return AuthInterceptor(context)
-    }
+//    @Provides
+//    @Singleton
+//    fun providesAuthenticationToken(@ApplicationContext context: Context) : Interceptor{
+//        return AuthInterceptor()
+//    }
 
     @Provides
     @Singleton
@@ -62,10 +62,10 @@ class AppModule {
 
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .addInterceptor(AuthInterceptor(context))
-            .readTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
-             .writeTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
+            .addInterceptor(AuthInterceptor())
+            // .addInterceptor(AuthInterceptor(context))
+//            .readTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
+//             .writeTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
             .build()
     }
 /*DISABLE BACKEND TOKEN */

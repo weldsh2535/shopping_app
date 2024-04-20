@@ -63,7 +63,8 @@ class BlogReadFragment : Fragment() {
         var it=Gson().fromJson(data,BlogResponse::class.java)
         binding?.title?.text = it.title
         binding?.body?.text = Html.fromHtml(it.story, Html.FROM_HTML_MODE_COMPACT)
-        binding?.images?.placeImage(BASE_URL + it.image)
+       // binding?.images?.placeImage(BASE_URL + it.image)
+        binding?.images?.placeImage(it.image)
         binding?.progressBar?.visibility=View.GONE
 
     }

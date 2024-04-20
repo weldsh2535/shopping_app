@@ -1,5 +1,6 @@
 package com.sartor.ui.login
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -42,12 +43,14 @@ class LoginViewModel @Inject constructor(private val repositoryImpl: RepositoryI
         viewModelScope.launch{
         repositoryImpl.loginUser(loginRequest,object : OperationCallback<LoginResponse> {
             override fun onError(error: String?) {
+                Log.v("LOGIN1", "isViewLoading $error")
                 _isViewLoading.postValue(false)
                 _onMessageError.postValue(error!!)
                 _isLoginSuccessful.postValue(false)
             }
 
             override fun onSuccess(data: LoginResponse?) {
+                Log.v("LOGIN1", "isViewLoading $data")
                 _isViewLoading.postValue(false)
                 _isLoginSuccessful.postValue(true)
             }

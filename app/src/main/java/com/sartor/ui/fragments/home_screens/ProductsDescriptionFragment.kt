@@ -100,14 +100,15 @@ class ProductsDescriptionFragment : Fragment() {
         }.attach()
 
         val slideModel: ArrayList<SlideModel> = arrayListOf()
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[0]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[1]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[2]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[3]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[4]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[5]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[6]))
-        slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[7]))
+      //  slideModel.add(SlideModel(Constant.BASE_MEDIA + args.details!!.productImages[0]))
+        slideModel.add(SlideModel(args.details!!.productImages[0]))
+        slideModel.add(SlideModel(args.details!!.productImages[1]))
+        slideModel.add(SlideModel(args.details!!.productImages[2]))
+        slideModel.add(SlideModel(args.details!!.productImages[3]))
+        slideModel.add(SlideModel(args.details!!.productImages[4]))
+        slideModel.add(SlideModel(args.details!!.productImages[5]))
+//        slideModel.add(SlideModel(args.details!!.productImages[6]))
+//        slideModel.add(SlideModel(args.details!!.productImages[7]))
 
         binding?.imageSlider?.setImageList(slideModel, scaleType = ScaleTypes.CENTER_INSIDE)
 

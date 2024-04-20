@@ -35,9 +35,11 @@ class ShoppingBagItemAdapter(val list: List<CartItem>, val context: Activity) :
 
         holder.name.text = list[position].productName
         holder.desc.text = list[position].productDescription
+        Log.d("aweke","1111111111111111111111")
         holder.price.text = Constant.CURRENCY+list[position].productPrice
+        Log.d("aweke","1111111111111111111111")
         holder.quantity.text = list[position].productQuantity.toString()
-
+        Log.d("aweke","1111111111111111111111")
          //Todo -> Image received from server is wrong using brand image, REVERT LATER
 
 

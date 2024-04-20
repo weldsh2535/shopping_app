@@ -40,7 +40,8 @@ class BlogsAdapter(val list: List<BlogResponse>, val context: Context) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = list[position].title
         holder.body.text = Html.fromHtml(list[position].story, Html.FROM_HTML_MODE_COMPACT)
-        holder.img.placeImage(Constant.BASE_MEDIA + list[position].image)
+       // holder.img.placeImage(Constant.BASE_MEDIA + list[position].image)
+        holder.img.placeImage( list[position].image)
 
         holder.container.setOnClickListener {
 

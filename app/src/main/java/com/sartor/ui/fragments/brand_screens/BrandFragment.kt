@@ -110,7 +110,8 @@ class BrandFragment : Fragment() {
 
 
             binding?.tvSellerUsername?.text = data.name
-            binding?.ivSellerCircle?.placeImage(Constant.BASE_URL + data.brands.img)
+           // binding?.ivSellerCircle?.placeImage(Constant.BASE_URL + data.brands.img)
+            binding?.ivSellerCircle?.placeImage(data.brands.img)
             binding?.tvDescription?.text =
                 HtmlCompat.fromHtml(data.description ?: "", HtmlCompat.FROM_HTML_MODE_COMPACT)
 

@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class SharedPreference @Inject constructor(@ApplicationContext context: Context) {
 
-    private  val BASE_URL = "http://52.159.111.122:8082/"
+    private  val BASE_URL = "http://10.0.2.2:8080"
 
         private val PREFS_NAME = "com.sartor.app"
         private val LOGIN_TOKEN = "login_token"

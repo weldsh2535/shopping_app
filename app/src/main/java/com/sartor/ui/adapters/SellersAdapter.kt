@@ -48,8 +48,8 @@ class SellersAdapter(private val list: List<BrandResponse>, val context: Context
         val brandID = brand.id
 
         holder.name.text = brand.title
-        holder.imgLogo.placeImage(Constant.BASE_MEDIA+brand.img)
-        holder.imgMain.placeImage(Constant.BASE_MEDIA+brand.img)
+        holder.imgLogo.placeImage(brand.img)
+        holder.imgMain.placeImage(brand.img)
         holder.comment.text = brand.followers.size.toString()
         holder.likes.text = brand.likes.size.toString()
 

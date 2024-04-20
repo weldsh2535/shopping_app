@@ -31,7 +31,7 @@ data class ProductResponse(
 ) {
 
     data class Store(
-        @SerializedName("full_name")
+        @SerializedName("email")
         val full_name: String,
         @SerializedName("picture")
         val picture: String,

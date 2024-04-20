@@ -32,8 +32,8 @@ class BrandsAdapter(private var list: List<BrandResponse>, val context: Activity
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        holder.img.placeImage(Constant.BASE_MEDIA + list[position].img)
+        //holder.img.placeImage(Constant.BASE_MEDIA + list[position].img)
+        holder.img.placeImage(list[position].img)
         holder.title.text = list[position].title
        Log.e("BRAND::",list[position].toString());
         val direction = HomeFragmentDirections.actionHomeFragment2ToSellerProfileFragment(Gson().toJson(list[position]))

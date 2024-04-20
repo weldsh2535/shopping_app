@@ -3,6 +3,7 @@ package com.sartor.ui.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import android.widget.VideoView
@@ -56,10 +57,12 @@ class WelcomeActivity : AppCompatActivity() {
 //    startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
 //                finish()
             if (sharedPreference.isLogin()) {
+                Log.d("weldsh", "Error setting camera preview");
                 startActivity(Intent(this@WelcomeActivity, HomeActivity::class.java))
                 getFavorites()
                 finish()
             } else {
+                Log.d("weldsh", "Error setting");
                 startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
                 finish()
             }

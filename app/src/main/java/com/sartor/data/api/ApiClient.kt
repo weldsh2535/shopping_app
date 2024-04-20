@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-private val CONNECTION_TIMEOUT = 500L
+private val CONNECTION_TIMEOUT = 5000L
 
 object ApiClient {
     //private val sharedPreference: SharedPreference
@@ -23,10 +23,10 @@ object ApiClient {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
         val client: OkHttpClient = OkHttpClient.Builder()
-            .addInterceptor(interceptor)
-            .addInterceptor(AuthInterceptor(context))
-            .readTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
-            .writeTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
+            .addInterceptor(AuthInterceptor())
+//            .addInterceptor(AuthInterceptor(context))
+//            .readTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
+//            .writeTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
             .build()
 
         return Retrofit.Builder()

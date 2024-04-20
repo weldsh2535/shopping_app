@@ -84,7 +84,8 @@ class WishlistFragment : Fragment() {
 
     private fun sendAndRequestResponse() {
 
-        var token = sharedPreference.getToken()
+        //var token = sharedPreference.getToken()
+        var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWJhOTYwNTE0YTA2NGExODVlMzdkNiIsImVtYWlsIjoiY3VzdG9tZXJzMUBnbWFpbC5jb20iLCJzY29wZXMiOlsiY3VzdG9tZXJzIl0sImlhdCI6MTcxMzA4OTA4N30.-4znK18LU2QsIBVpALP5fF2kuAjmIc0FM_F9eRDQt4A"
 
         url = Constant.BASE_URL + "api/wishlists/lists"
         mRequestQueue = Volley.newRequestQueue(context)
@@ -96,9 +97,9 @@ class WishlistFragment : Fragment() {
                 Log.d("_wishList", response)
 
 
-                var obj = JSONObject(response)
-
-                var product = Gson().fromJson(obj.toString(), Product::class.java)
+//                var obj = JSONObject(response)
+//
+//                var product = Gson().fromJson(obj.toString(), Product::class.java)
 
 
             },

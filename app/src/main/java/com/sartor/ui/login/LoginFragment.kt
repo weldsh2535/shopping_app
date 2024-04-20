@@ -51,7 +51,7 @@ class LoginFragment : Fragment() {
             ) {
                 Toast.makeText(this.requireContext(), "Please fill in email and password", Toast.LENGTH_SHORT).show()
             } else {
-
+                Log.v("LOGIN", "isViewLoading $it")
                 val email = binding?.etMail!!.text.toString()
                 val password = binding?.etPassword!!.text.toString()
                     loginViewModel.loginUser(LoginRequest(userName =email,password = password ))

@@ -36,8 +36,8 @@ class ProductsAdapter(private var list: List<ProductResponse>, private val conte
 
 
         Log.d("_productId", list[position].id)
-
-        holder.img.placeImage(Constant.BASE_MEDIA+list[position].img.img0)
+       // holder.img.placeImage(Constant.BASE_MEDIA+list[position].img.img0)
+        holder.img.placeImage(list[position].img.img0)
 
         val action = HomeFragmentDirections.actionHomeFragment2ToProductsDescriptionFragment(
             ProductDetails(

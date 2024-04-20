@@ -39,21 +39,22 @@ class ShoppingBagViewModel @Inject constructor(private val repositoryImpl: Repos
 
 
     fun getCart(){
-
-        _isViewLoading.value = true
+       _isViewLoading.value = true
 
         val cartItemList  = mutableListOf<CartItem>()
         CoroutineScope(Dispatchers.IO).launch {
-
+            Log.d("aweke","---122345555----------")
             repositoryImpl.getCart( object: OperationCallback<CartResponse> {
+
                 override fun onSuccess(data: CartResponse?) {
+                    Log.d("aweke","------343556-------")
                     _isViewLoading.postValue(false)
                       data!!.data.forEach {
-                          Log.i("CART",it.product.name)
-                          Log.i("CART",it.product.brands.img)
-                          Log.i("CART",it.product.price.toString())
-                          Log.i("CART",it.product.category.name)
-                          Log.i("CART",it.product.qty.toString())
+//                          Log.i("CART",it.product.name)
+//                          Log.i("CART",it.product.brands.img)
+//                          Log.i("CART",it.product.price.toString())
+//                          Log.i("CART",it.product.category.name)
+//                          Log.i("CART",it.product.qty.toString())
 
                           cartItemList.add(
                               CartItem(

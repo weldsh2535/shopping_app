@@ -48,7 +48,8 @@ class ProductsAdapter2(private var list: List<ProductResponse>, private val cont
         holder.name.text = list[position].name
         holder.price.text = "$" + list[position].price
         holder.store.text = list[position].store.full_name
-        holder.img.placeImage(Constant.BASE_MEDIA + list[position].img.img0)
+       // holder.img.placeImage(Constant.BASE_MEDIA + list[position].img.img0)
+        holder.img.placeImage(list[position].img.img0)
 
 
 

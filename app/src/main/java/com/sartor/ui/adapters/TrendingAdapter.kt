@@ -34,7 +34,8 @@ class TrendingAdapter(private var list: List<BrandResponse>, val context: Contex
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (list[position].isTop) {
 
-            holder.trend.placeImage(Constant.BASE_MEDIA + list[position].img)
+           // holder.trend.placeImage(Constant.BASE_MEDIA + list[position].img)
+            holder.trend.placeImage( list[position].img)
         }
 
 

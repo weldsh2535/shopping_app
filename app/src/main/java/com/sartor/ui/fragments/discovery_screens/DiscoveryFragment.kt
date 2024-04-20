@@ -120,8 +120,8 @@ class DiscoveryFragment : Fragment() {
 
 
     private fun sendAndRequestResponse() {
-        var token = sharedPreference.getToken()
-
+       var token = sharedPreference.getToken()
+        // var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjAxNzAzY2FhZDk3MmJkNWFkNjVhMyIsImVtYWlsIjoic2FsZXJAZ21haWwuY29tIiwic2NvcGVzIjpbImN1c3RvbWVycyJdLCJpYXQiOjE3MTMzNzkxMDB9.TN8j4psyn0XghJRg1y1oR7KQwzHn5MRcOVcRyM29uPY"
         url = Constant.BASE_URL + "api/brands"
         mRequestQueue = Volley.newRequestQueue(context)
         mStringRequest = object : StringRequest(
